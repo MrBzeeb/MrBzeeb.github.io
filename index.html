@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Beren Hollingsworth</title>
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+  <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inconsolata';
+      font-size: 22px;
+
+      padding: 0;
+      margin: 0;
+      background-color: rgb(44, 50, 60);
+    }
+
+    .w3-pale-purple {
+      background-color: #fad1ff;
+      color: black;
+    }
+
+    .w3-pale-orange {
+      background-color: #ffe7b5;
+      color: black;
+    }
+
+    .parallax {
+      background-image: url(https://i.ibb.co/MZ53ZYJ/table9.png);
+
+      height: 100vh;
+
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .parallaxCenter {
+      color: white;
+      text-align: center;
+      font-size: 10vw;
+      line-height: 100vh;
+    }
+
+    .parallaxBar {
+      color: white;
+      position: absolute;
+      bottom: 10vh;
+      left: 0;
+    }
+
+    .smallText {
+      font-size: 16px;
+      color: white;
+    }
+
+    p {
+      font-family: Inconsolata;
+    }
+
+    .test {
+      color: red;
+      font-weight: bold;
+    }
+
+    table {
+      border: 1px solid black;
+      border-spacing: 3px;
+      padding: 2px;
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!--Title-->
+  <div class="parallax">
+    <div class="parallaxCenter">
+      <b>Beren Hollingsworth</b>
+    </div>
+
+
+    <!--Bottom Bar-->
+
+
+    <div class="parallaxBar">
+      <!--<p id="debug">debugging text</p>-->
+      <p id="dateNow"></p>
+      <p id="countdown">Loading...</p>
+    </div>
+
+
+    <!--Countdown Script-->
+    <script>
+      var date = new Date("May 17, 2021, 0:00:00").getTime();
+      var today = new Date();
+
+      var repeat = setInterval(function() {
+        var now = new Date().getTime();
+
+        var till = date - now;
+
+        var day = Math.floor(till / (1000 * 60 * 60 * 24));
+        var hour = Math.floor((till % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var min = Math.floor((till % (1000 * 60 * 60)) / (1000 * 60))
+        var sec = Math.floor((till % (1000 * 60)) / (1000))
+
+        document.getElementById('countdown').innerHTML = day + "d " + hour + "h " + min + "m " + sec + "s till summer";
+        document.getElementById("dateNow").innerHTML = today.toDateString();
+
+        if (till < 0) {
+          clearInterval(repeat);
+          document.getElementById("countdown").innerHTML = "All Done For This Year!";
+        }
+
+      }, 1000);
+    </script>
+
+    <!--Tabs-->
+
+    <style>
+      .tab {
+        overflow: hidden;
+        background-color: #1e1e1e;
+        padding: 1px, 12px;
+        outline: none;
+        height: 10vh;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        opacity: .5;
+      }
+
+      .tab button {
+        background-color: inherit;
+        float: left;
+        cursor: pointer;
+        transition: .3s;
+        font-size: 3vw;
+        border: none;
+        height: inherit;
+        border-right: 2px solid #ddd;
+        font-family: "Inconsolata";
+        font-size: 22px;
+        color: #ffffff;
+      }
+
+      .tab button:hover {
+        background-color: #5b5b5b;
+      }
+
+      .tab button.active {
+        background-color: #8e8e8e;
+      }
+
+      .tabcontent {
+        display: none;
+        color: white;
+        overflow: hidden;
+        font-size: 18px;
+      }
+    </style>
+
+    <!--Buttons For Tabs-->
+
+    <div class="tab">
+      <!--a href="">-->
+      <button class="tablink" onclick="openTab(event, 'Schedule')">Schedule</button>
+      <button class="tablink" onclick="openTab(event, 'Useful Links')">Useful Links</button>
+      <button class="tablink" onclick="openTab(event, 'Images')">Images</button>
+      <button class="tablink" onclick="openTab(event, '1202 Final Project')">1202 Final Project</button>
+      <!--<button class="tablink" onclick="location.href='2156portfolio/'">2156 Portfolio</button>-->
+    </div>
+
+  </div>
+
+
+  <!--Spot where you put the actual information-->
+
+
+  <div id="Schedule" class="tabcontent">
+    <p>2020 Fall Semester Schedule</p>
+
+    <style>
+      responsiveCal,
+      iframe {
+        width: 90vw;
+        height: 60vh;
+        margin: 0 auto;
+        display: block;
+        border-style: none;
+      }
+    </style>
+
+    <div class="w3-panel w3-pale-blue w3-leftbar w3-rightbar w3-border-blue w3-hover-blue">
+      <div class="responsiveCal" style="padding:1vh">
+        <iframe
+          src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%233F51B5&amp;ctz=America%2FNew_York&amp;src=ajQ5NW1sMWY5bjJubjJiNDRyZWY4aDFyZWNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%23AD1457&amp;showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=WEEK"
+          style="border-width:0" frameborder="0" scrolling="no"></iframe>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+  <div id="Useful Links" class="tabcontent">
+    <div class="w3-panel w3-pale-blue w3-leftbar w3-rightbar w3-border-blue w3-hover-blue">
+      <p>
+        <a href="https://youtu.be/iL_585NFHqU">https://youtu.be/iL_585NFHqU</a>
+      </p>
+    </div>
+
+    <div class="w3-panel w3-pale-yellow w3-leftbar w3-rightbar w3-border-yellow w3-hover-yellow">
+      <p>
+        <a href="https://uncc.instructure.com/courses/121190">ENGR 1202 Canvas Page</a>
+      </p>
+    </div>
+
+    <div class="w3-panel w3-pale-green w3-leftbar w3-rightbar w3-border-green w3-hover-green">
+      <p>
+        <a href="https://ishiharadesign.com/">Interesting Website Design</a>
+      </p>
+    </div>
+
+  </div>
+
+
+
+
+  <div id="Images" class="tabcontent">
+    <p>Robotics Images</p>
+    <img src="https://i.imgur.com/EyqfdZk.jpg" title="2018-2019 Aperture Science FTC Robot">
+    <img src="https://i.imgur.com/hylG8GL.jpg" title="2018-2019 Aperture Science FTC Slides">
+  </div>
+
+
+
+  <div id="1202 Final Project" class="tabcontent">
+    <div class="w3-panel w3-pale-blue w3-leftbar w3-rightbar w3-border-blue w3-hover-blue">
+      <p>
+        Link to website for 1202 Final Project:
+        <a href="https://webpages.uncc.edu/bhollin8/1202Final.html">https://webpages.uncc.edu/bhollin8/1202Final.html</a>
+      </p>
+    </div>
+  </div>
+
+
+  <script>
+    function openTab(evt, tabName) {
+
+      /*if (document.getElementById(tabName).style.display == "block")
+        document.getElementById("debug").innerHTML = "Got Block";*/
+
+      var i, tabcontent, tablinks, test;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      /*if (document.getElementById(tabName).style.display = "block"){
+        document.getElementById("debug").innerHTML = "Got Block";
+      }
+      else {*/
+      document.getElementById(tabName).style.display = "block";
+      evt.currentTarget.className += " active";
+
+      //Move down to open tab
+
+      //document.getElementById("debug").innerHTML = window.innerHeight;
+      //window.scrollTo(0, document.getElementById(tabName).offsetHeight > window.innerHeight ? window.innerHeight : document.getElementById(tabName).offsetHeight);
+
+      var dy = document.body.scrollTop;
+      var int = setInterval(function() {
+        dy += 30;
+        window.scrollTo(0, dy > window.innerHeight ? window.innerHeight : dy);
+        if (dy >= document.getElementById(tabName).offsetHeight || dy >= window.innerHeight)
+          //window.scrollTo(document.getElementById(tabName).offsetHeight > window.innerHeight ? window.innerHeight : document.getElementById(tabName).offsetHeight)
+          clearInterval(int);
+      }, 20)
+
+    }
+  </script>
+
+</body>
+
+</html>
