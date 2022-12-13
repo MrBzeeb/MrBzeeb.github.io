@@ -89,6 +89,10 @@
 
       padding: 3vw;
     }
+
+    .expo {
+      display: none;
+    }
   </style>
 
   <!-- jQuery Script -->
@@ -144,53 +148,64 @@
 
       <div class="expo" id="socPCore">
         <h>Performance Central Processing Unit Cores</h>
-        <p>The first product to have a defined core was the Intel 4004, released on November 15, 1971.</p>
+        <p>The first product to have a well defined CPU core was the Intel 4004, released on November 15, 1971.</p>
         <p>The CPU core design was developed as a more effective way for Intel to solve customer problems by building a more general purpose computational unit.</p>
+        <p>Computer designers focused on integrating the important elements for computation onto one chip that could easily be repurposed to complete many different tasks.</p>
+        <p>The development of the Intel 4004 allowed people to use their computers to solve more varied problems without needing more excessively large systems.</p>
         <p>All modern computers utilize the transistor based core design pioneered by the Intel 4004.</p>
       </div>
 
       <div class="expo" id="socECore">
         <h>Efficiency Central Processing Unit Cores</h>
-        <p>A recent development in computer design, efficiency cores are electrically efficient processing units to be used when the computational load is low.</p>
-        <p>Some modern CPU architectures will include a few less powerful Efficiency Cores as well as the normal Performance Cores.</p>
-        <p>These smaller circuits are designed in similar manner to P Cores but are not required to be as performant and instead attempt to improve thermal and electrical efficiency.</p>
+        <p>A recent development in computer design, Efficiency Cores are electrically efficient processing units to be used when the computational load is low.</p>
+        <p>Some modern CPU architectures will include a few less powerful, more thermally and electrically efficient E Cores as well as the normal P Cores.</p>
+        <p>E Cores are part of manufacturers response to the ever growing power required to satisfy customer performance desires.</p>
+        <p>Computers and computing related technology is expected to draw 21% of the world’s electricity in 2030 and is likely to continue trending upwards.</p>
+        <p>Increased energy demands cause concerns for the sustainability of computing as the world slowly attempts to change to greener energy production.</p>
       </div>
 
       <div class="expo" id="socGPU">
         <h>Graphics Processing Unit</h>
         <p>Originally called the Graphics Processor Unit and was built for 1970’s video games to handle instructions related to sending the video signal for the game.</p> 
         <p>Eventually the term GPU was redefined to mean Graphics Processing Unit which was largely popularized by Nvidia and the GeForce 256.</p>
-        <p>Modern GPUs utilize parallel processing to complete many numerical operations independently at the same time.</p>
+        <p>Modern GPUs utilize parallel processing to complete many numerical operations, independently, at the same time.</p>
+        <p>GPUs are the easiest entry into largely parallelized processing, a technique important to pop-culture with animation, video, and video games, as well as scientific or data science processing capability.</p>
       </div>
 
       <div class="expo" id="socNE">
         <h>Neural Engine</h>
-        <p>This hardware accelerator is specifically designed to increase performance of machine learning training and evaluation.</p>
+        <p>This hardware accelerator is specifically designed to increase performance of machine learning based algorithms.</p>
         <p>These circuits can only do one task but are generally faster than general purpose compute units at their task.</p>
-        <p>When computers were first being developed, all of the circuits were problem specific and took hardware changes to reprogram.</p>
-        <p>With the rise of general purpose computing, problem specific electronics fell out of favor.</p>
+        <p>When computers were first being developed, all of the circuits were problem specific and took hardware changes to reprogram, but this architecture fell out of favor for the much easier to reuse general purpose computational design.</p>
         <p>Recently hardware accelerators have become more popular to attempt to speed up common actions or complete actions that are not efficient for general purpose systems.</p>
+        <p>The Neural Engine and other like-minded machine learning hardware accelerators allow algorithm developers to run and train much more complex neural networks.</p>
       </div>
 
       <div class="expo" id="socCache">
         <h>Memory Cache</h>
-        <p>First developed by Maurice Wilkes in 1965.</p>
-        <p>CPUs need instructions on what to do and data on which to execute those instructions.</p>
-        <p>All of this information is fed from the computer's memory.</p>
-        <p>Memory and storage is often slower than how fast a CPU can process some instructions.</p>
-        <p>For that reason, it is best to have a system with a small amount of fast access memory that can quickly feed the CPU with information without having to wait for storage access times.</p>
+        <p>Computer Memory Cache was first conceptualized by Maurice Wilkes in 1965.</p>
+        <p>Wilkes realized that CPUs were waiting on instructions or data to be returned from regular memory.</p>
+        <p>Overall system efficiency could be improved by adding a small amount of fast access memory that could hold batches of information for upcoming CPU tasks.</p>
+        <p>The development of cache is a strong example of how engineers manipulate computer architecture in attempts to improve desired results.</p>
+        <p>However, augmenting the architecture can cause vulnerability and biases like speculative execution bugs.</p>
       </div>
 
       <div class="expo" id="socMem">
         <h>Memory</h>
-        <p>The concept of memory has been important to any form of general computer even since the Analytical Engine.</p>
+        <p>The concept of memory has been important to any form of general computer, even since the Analytical Engine.</p>
         <p>Memory allows the computer to hold data and instructions to process.</p>
-        <p>Memory originated in the form of mechanical devices, then drum memory, then woven core memory. Eventually engineers developed vacuum tube memory and finally transistor based memory.</p>
+        <p>Memory originated in the form of mechanical devices, then drum memory, then core rope memory. Eventually engineers developed vacuum tube memory and finally transistor based memory.</p>
+        <p>It has been extremely important to engineers to improve memory stability, compactness, speed, and capacity.</p>
+        <p>Improving memory is important to allow larger computations to happen more efficiently, whether for war-time calculations, Apollo guidance computers, or data science applications.</p>
       </div>
 
       <div class="expo" id="socIO">
         <h>Input / Output</h>
         <p>These circuits are responsible for communication between the SOC and the rest of the devices connected to the computer.</p>
+        <p>Humans cannot interact with the electrons moving around on a computer die, there must be some interface that allows interactivity with the system.</p>
+        <p>Computer peripherals allow for different devices to allow humans to access the processing power of a computer.</p>
+        <p>However, not all peripherals are made the same. The most common and effective devices might not be effective for people with certain concerns or disabilities.</p>
+        <p>A device that works to bring computers to people can also effectively push certain groups away due to interfacing issues.</p>
       </div>
     </div>
   </div>
