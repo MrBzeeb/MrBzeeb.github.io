@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Machine Learning Race Cards</title>
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+  <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
+  <style>
+    html {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Inconsolata';
+      font-size: 16px;
+
+      padding: 0;
+      margin: 0;
+      background-color: rgb(44, 50, 60);
+      height: 100%;
+
+      overflow:hidden;
+    }
+
+    p {
+      font-family: Inconsolata;
+
+      line-height: normal;
+      vertical-align: middle;
+
+      margin-block-start: 1em;
+      margin-block-end: 0;
+
+      width: 100%;
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+
+    .label {
+      height: 10vh;
+      text-align: center;
+      font-size: 5vh;
+      font-weight: bolder;
+      color: white;
+    }
+
+    /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+    .flip-card {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      background-color: transparent;
+      width: 30vw;
+      height: 40vh;
+      perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    }
+
+    /* This container is needed to position the front and back side */
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    /* Do an horizontal flip when you move the mouse over the flip box container */
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    /* Position the front and back side */
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden; /* Safari */
+      backface-visibility: hidden;
+    }
+
+    /* Style the front side (fallback if image is missing) */
+    .flip-card-front {
+      color: black;
+    }
+
+    /* Style the back side */
+    .flip-card-back {
+      background-color: dodgerblue;
+      color: white;
+      transform: rotateY(180deg);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .name {
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-align: center;
+      width: 100%;
+      font-weight: bold;
+      font-size: 3vh;
+    }
+
+    .roundedCorners {
+      border-radius: 1vw;
+    }
+
+
+
+    .rowContainer {
+      width: 100%;
+      display: table;
+    }
+
+    .boxRow {
+      display: table-row;
+    }
+
+    .box {
+      position: relative;
+      display: table-cell;
+      text-align: center;
+      width: 33vw;
+      height: 45vh;
+    }
+  </style>
+  
+</head>
+
+
+
+<body>
+  <div class="label">
+    <h>Machine Learning Race Cards</h>
+  </div>
+
+  <div class="rowContainer">
+    <div class="boxRow">
+
+      <div class="box">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="roundedCorners" src="diversification-71-toned-1050.jpg" alt="Neighborhood With Minority Groups">
+              <div class="name" style="color: rgb(0, 0, 0)">PredPol and Minority Neighborhoods</div>
+            </div>
+      
+            <div class="flip-card-back roundedCorners">
+              <p>PredPol predictive policing.</p>
+              <p>Predictive Policing attempts to most effectively allocate police resources to locations where they are most likely to be needed.</p>
+              <p>The machine learning models were discovered to be repeatedly sending police officers to the same racially minority neighborhoods. This behavior can be attributed to the feedback loop that occurs when police are sent to areas with more police reports which are made due to more police being sent to the area.</p>
+              <p>The algorithm was used to allocate police resources which were being over allocated to minority areas. This can potentially negatively affect the areas being over policed as they feel a hostility towards their neighborhoods. It can also negatively affect other areas of the city which are not receiving as much police presence as they should. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="roundedCorners" src="interviewing.jpg" alt="Woman being interviewed">
+              <div class="name" style="color: rgb(0, 0, 0)">Amazon Hiring Women</div>
+            </div>
+      
+            <div class="flip-card-back roundedCorners">
+              <p>Amazon application sorting.</p>
+              <p>Recruiting engine designed to review job applicants and automate filtering of top talent.</p>
+              <p>The machine learning models were shown to under-rate female candidates especially for technical positions. Likely a factor of being trained on existing and historic Amazon staff. Because of male dominance in the tech industry, Amazon algorithms continued to neglect female candidates. The algorithm was shown to downgrade applications that included the word “women’s” especially in organization names or women’s colleges.</p>
+              <p>Amazon claims that the tool was never utilized although some Amazon staff claim that the evaluation was available to recruiters.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="roundedCorners" src="wrongfullArrest.jpg" alt="Black Man Contemplating">
+              <div class="name" style="color: rgb(0, 0, 0)">COMPAS Predicting Repeat Criminals</div>
+            </div>
+      
+            <div class="flip-card-back roundedCorners">
+              <p>COMPAS recidivism prediction developed by Northpointe.</p>
+              <p>The Correctional Offender Management Profiling for Alternative Sanctions algorithm was intended to use data from police systems and questionnaires given to incarcerated people to predict the risk of a person committing a crime again after release.</p>
+              <p>COMPAS was shown to incorrectly predict higher rates of recidivism for black defendants and to incorrectly predict lower rates of recidivism for white defendants.</p>
+              <p>The algorithm was used to make decisions on whether to detain criminals before trial. Could cause black defendants less ability to defend themselves and/or continue with their lives/work/family.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="rowContainer">
+    <div class="boxRow">
+      <div class="box">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="roundedCorners" src="hospitalBed.jpg" alt="Black Man Contemplating">
+              <div class="name" style="color: rgb(0, 0, 0)">U.S. Healthcare Provides Biased Care</div>
+            </div>
+      
+            <div class="flip-card-back roundedCorners">
+              <p>A system of commercial risk assessment models are utilized across the U.S. Healthcare system.</p>
+              <p>The algorithm is designed to automatically measure several factors about each patient and compute a risk assessment of their state.</p>
+              <p>Researchers determined that the systems were undervaluing the risk that black patients were in. The likely cause is that the algorithms interpret money spent on treatment as a strong indicator of risk. Less money is spent on black patients even if they have the same symptoms.</p>
+              <p>Because the algorithms undervalue the risk that black patients are in, they are less likely to receive the extra care they need. This can lead to higher mortality rates or less preferable recoveries.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img class="roundedCorners" src="facialRecognition.jpg" alt="Black Man Contemplating">
+              <div class="name" style="color: rgb(0, 0, 0)">Racially Biased Facial Recognition</div>
+            </div>
+      
+            <div class="flip-card-back roundedCorners">
+              <p>Facial Recognition software developed by Idemia.</p>
+              <p>A facial recognition algorithm was designed to search through a database of people and find a match to a new photo.</p>
+              <p>When the National Institute of Standards and Technology tested Idemia’s system, they determined that the algorithm falsely determined black women's faces ten times more often than for white women.</p>
+              <p>Errors in facial identification could cause issues during criminal investigations, when traveling, when trying to access secured facilities, or even when trying to unlock a phone. The drastically reduced performance for black people could cause racially biased difficulties throughout daily life.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+</body>
+
+</html>
