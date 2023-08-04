@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../portfolio-responsive-complete"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "MrBzeeb.github.io"
+	}
+}

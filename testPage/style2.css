@@ -1,0 +1,30 @@
+html {
+    font-family: 'Inconsolata';
+    font-size: 22px;
+}
+
+body {
+    padding: 1rem;
+}
+
+/* CARDS */
+.cards {
+    max-width: 90vw;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+  
+.card {
+    background-color: dodgerblue;
+    color: white;
+    padding: 0rem;
+    aspect-ratio: 16 / 9;
+}
+
+img {
+    padding: 0rem;
+    width: 100%;
+}
